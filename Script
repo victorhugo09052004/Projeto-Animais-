@@ -1,0 +1,29 @@
+class AnimalEstimacao:
+    def __init__(self, nome, raca, idade, responsavel, telefone):
+        self.nome = nome
+        self.raca = raca
+        self.idade = idade
+        self.responsavel = responsavel
+        self.telefone = telefone
+    
+    def exibir_cadastro(self):
+        print("Cadastro do Animal de Estimação:")
+        print("Nome:", self.nome)
+        print("Raça:", self.raca)
+        print("Idade:", self.idade)
+        print("Responsável:", self.responsavel)
+        print("Telefone:", self.telefone)
+
+def cadastrar_animal():
+    nome = input("Digite o nome do animal: ")
+    raca = input("Digite a raça do animal: ")
+    idade = input("Digite a idade do animal: ")
+    responsavel = input("Digite o nome do responsável: ")
+    telefone = input("Digite o telefone do responsável: ")
+    
+    animal = AnimalEstimacao(nome, raca, idade, responsavel, telefone)
+    return animal
+
+# Teste do código
+animal1 = cadastrar_animal()
+animal1.exibir_cadastro()
